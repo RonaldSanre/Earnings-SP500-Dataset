@@ -1,6 +1,4 @@
-# What You Say and How You Say It Matters: Predicting Stock Volatility Using Verbal and Vocal Cues
-
-by Yu Qin and Yi Yang, ACL 2019.
+# [BTP - II] What You Say and How You Say It Matters: Predicting Stock Volatility of S&P 500 companies using Verbal and Vocal Cues
 
 ## Abstract
 
@@ -17,35 +15,14 @@ The whole dataset is split to five files, please download all the files and unzi
 To unzip the dataset under Linux environment, please first use `zip -s0 ACL19_Release.zip --out ACL19_Release_All.zip` to merge the files.
 Then use `unzip -q ACL19_Release_all.zip` to unzip the dataset.
 
-## Citation
-
-If you use this data in your research, please cite the following paper:
-
-Qin, Yu., & Yang, Yi. (2019). What You Say and How You Say It Matters: Predicting Stock Volatility Using Verbal and Vocal Cues. Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics.
-
-    @inproceedings{qin-yang-2019-say,
-    title = "What You Say and How You Say It Matters: Predicting Stock Volatility Using Verbal and Vocal Cues",
-    author = "Qin, Yu  and
-      Yang, Yi",
-    booktitle = "Proceedings of the 57th Annual Meeting of the Association for Computational Linguistics",
-    month = jul,
-    year = "2019",
-    address = "Florence, Italy",
-    publisher = "Association for Computational Linguistics",
-    url = "https://www.aclweb.org/anthology/P19-1038",
-    pages = "390--401",}
-
 ## Annotation Format
 
-Each folder in our dataset represents an earnings conference call; the folders are named as "CompanyName_Date".
+Each folder in our dataset represents an earnings conference call; the folders are named as "CompanyName".
 
-In each folder, we put the processed text transcript and segmented audio recordings. As we described in our paper, we only select the most spoken executive (usually the CEO) to avoid interference. 
+In each folder, we put the processed text transcript and segmented audio recordings. As we described, we only select the most spoken executive (usually the CEO) to avoid interference. 
 
 In the processed text transcript, each line is a sentence of CEO, ordered by time. 
 
 For the segmented audio recordings, they are named as "Speaker_Paragraph_Sentence". Since in our Iterative Forced Alignment (IFA) processing, the whole audio recording is firstly segmented on paragraph level, then the sentence level. The order of segmented audio recordings as from "Speaker_1_1", "Speaker_1_2", "Speaker_1_m<sub>1</sub>" to "Speaker_n_m<sub>n</sub>", where m<sub>x</sub> represents the number of sentences of paragraph x, and n represents the number of paragraphs.
 
 Each line in the text file corresponds to an audio file. And the total number of lines in a text file is the same as the total number of audio files for the same earnings conference call.
-    
-## Contact
-If you have any questions regarding the repo, please contact Yu Qin (<qinyu.gemini@gmail.com>) or create an issue.
